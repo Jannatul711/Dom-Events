@@ -1,27 +1,26 @@
 const Form = document.querySelector("form");
-const Email = document.querySelector("div #email");
-const Password = document.querySelector("div #password");
+// console.log(Form);
+
+const Email = Form.querySelector("#email");
+const Password = Form.querySelector("#password");
 
 // console.log(Password);
 
-Form.addEventListener("submit",FormHandler)
+Form.addEventListener("submit", FormHandler)
 
 function FormHandler(e) {
-    e.preventDefault();
-    console.log(e);
     
-
+    e.preventDefault();
+    // console.log(e);
+    
     const formInfo ={
-        Username: Username.value,
-        Password : Password.value,
-        
+        YourEmail:Email.value,
+        Password : Password.value,    
     }
 
-    Username.value="";
-    Password.value="";
-        
-   
+    Email.value= "";
+    Password.value= "";
+         
     console.log(formInfo);
-
     
 }
